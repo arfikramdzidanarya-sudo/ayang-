@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Tidur Ayang 💤</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+        body {
+            min-height: 100vh;
+            background: linear-gradient(180deg, #0f172a, #1e1b4b, #312e81);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .moon {
+            position: absolute;
+            top: 50px;
+            right: 80px;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #fef3c7;
+            box-shadow: 0 0 30px #fef3c7, 0 0 60px #fde68a;
+        }
+        .card {
+            width: 90%;
+            max-width: 520px;
+            background: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(12px);
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+            border: 1px solid rgba(255,255,255,0.2);
+            text-align: center;
+            z-index: 2;
+        }
+        .text h1 {
+            color: #fef3c7;
+            margin-bottom: 22px;
+            font-size: 28px;
+        }
+        .text p {
+            color: #e0e7ff;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 25px;
+        }
+        .tanda {
+            color: #fcd34d;
+            font-weight: bold;
+            font-style: italic;
+        }
+        audio {
+            width: 100%;
+            margin-top: 15px;
+            outline: none;
+            border-radius: 8px;
+        }
+        .star {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            background: white;
+            border-radius: 50%;
+            animation: kelap 3s ease-in-out infinite;
+        }
+        @keyframes kelap {
+            0%, 100% { opacity: 0.2; transform: scale(0.8); }
+            50% { opacity: 1; transform: scale(1.2); box-shadow: 0 0 8px #fff; }
+        }
+    </style>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="moon"></div>
+
+    <div class="card">
+        <div class="text">
+            <h1>Selamat Malam, Ayangku 💖</h1>
+            <p>
+            Hari ini sudah lelah ya? Sekarang waktunya istirahat, biarkan pikiran dan tubuhmu tenang.<br><br>
+            Tutup matamu perlahan, bayangkan aku ada di sampingmu, memelukmu erat dan menjagamu sampai pagi.<br><br>
+            Semoga tidurmu nyenyak, mimpi-mimpimu indah, dan esok bangun dengan senyum ceria serta hati yang penuh semangat.<br><br>
+            Ingat, di mana pun kita berada, doaku selalu menyertaimu. Aku sayang kamu, lebih dari kata-kata yang bisa diucapkan.<br><br>
+            Istirahat yang cukup ya sayangku. Sampai bertemu lagi di mimpi dan esok hari 🤍🌙
+            </p>
+            <p class="tanda">— Yang selalu menyayangimu —</p>
+        </div>
+        <audio controls autoplay loop>
+            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-16.mp3" type="audio/mpeg">
+            Browser tidak mendukung pemutar audio.
+        </audio>
+    </div>
+
+    <script>
+        const starContainer = document.querySelector('.stars');
+        function buatBintang() {
+            const bintang = document.createElement('div');
+            bintang.classList.add('star');
+            bintang.style.left = Math.random() * 100 + '%';
+            bintang.style.top = Math.random() * 100 + '%';
+            bintang.style.animationDelay = Math.random() * 3 + 's';
+            starContainer.appendChild(bintang);
+        }
+        for (let i = 0; i < 80; i++) {
+            buatBintang();
+        }
+    </script>
+</body>
+</html>
