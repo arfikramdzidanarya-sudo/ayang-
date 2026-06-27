@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Malam Nining 🌙</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 45px 35px;
+            border-radius: 24px;
+            text-align: center;
+            max-width: 520px;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+            animation: muncul 1.2s ease-out;
+        }
+
+        @keyframes muncul {
+            from { opacity: 0; transform: translateY(25px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .icon-malam {
+            font-size: 65px;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        h1 {
+            color: #ffffff;
+            font-size: 29px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: #a8d1ff;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            color: #f0f4ff;
+            font-size: 17px;
+            line-height: 1.9;
+            margin-bottom: 20px;
+        }
+
+        .penutup {
+            margin-top: 25px;
+            font-weight: 500;
+            color: #ffd700;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon-malam">🌙 ✨</div>
+        <h1>Selamat Malam</h1>
+        <h2>Nining</h2>
+        <p>
+            Semoga malam ini membawa ketenangan di hati, istirahat yang nyenyak, dan mimpi-mimpi indah yang menenangkan.
+        </p>
+        <p>
+            Lepaskan segala lelah hari ini, biarkan semesta merawatmu dalam tidur yang tenang. Semoga esok pagi bangun dengan semangat baru dan senyum yang menyegarkan.
+        </p>
+        <p class="penutup">Istirahat yang baik ya, Nining 🤍🌙</p>
+    </div>
+</body>
+</html>
