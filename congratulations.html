@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations Iza 🎓</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body{
+            background: linear-gradient(135deg,#8E2DE2,#4A00E0);
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            overflow:hidden;
+        }
+
+        .container{
+            background:white;
+            width:700px;
+            max-width:90%;
+            padding:40px;
+            border-radius:20px;
+            text-align:center;
+            box-shadow:0 15px 40px rgba(0,0,0,.3);
+            animation:fadeIn 1.5s;
+        }
+
+        h1{
+            color:#6A0DAD;
+            font-size:45px;
+            margin-bottom:15px;
+        }
+
+        h2{
+            color:#333;
+            margin-bottom:20px;
+        }
+
+        p{
+            color:#555;
+            line-height:1.8;
+            font-size:18px;
+        }
+
+        button{
+            margin-top:30px;
+            padding:15px 35px;
+            border:none;
+            border-radius:50px;
+            background:#6A0DAD;
+            color:white;
+            font-size:18px;
+            cursor:pointer;
+            transition:.3s;
+        }
+
+        button:hover{
+            background:#8E2DE2;
+            transform:scale(1.05);
+        }
+
+        #message{
+            margin-top:30px;
+            font-size:22px;
+            color:#d63384;
+            font-weight:bold;
+            display:none;
+            animation:pop .8s;
+        }
+
+        .emoji{
+            position:absolute;
+            font-size:35px;
+            animation:fall linear infinite;
+            top:-100px;
+        }
+
+        @keyframes fadeIn{
+            from{
+                opacity:0;
+                transform:translateY(30px);
+            }
+            to{
+                opacity:1;
+                transform:translateY(0);
+            }
+        }
+
+        @keyframes pop{
+            from{
+                transform:scale(0);
+                opacity:0;
+            }
+            to{
+                transform:scale(1);
+                opacity:1;
+            }
+        }
+
+        @keyframes fall{
+            0%{
+                transform:translateY(-100px);
+            }
+            100%{
+                transform:translateY(120vh);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎓 Congratulations, Iza! 🎉</h1>
+
+    <h2>Selamat atas Sidang Skripsimu!</h2>
+
+    <p>
+        Perjuangan panjang, rasa lelah, begadang, revisi tanpa henti,
+        hingga berbagai tantangan akhirnya terbayarkan hari ini.
+        Semoga pencapaian ini menjadi awal dari perjalanan yang lebih
+        besar dan penuh kesuksesan.
+        <br><br>
+
+        Teruslah melangkah, jangan pernah berhenti bermimpi,
+        dan semoga semua cita-citamu dapat terwujud.
+        Kami bangga atas kerja keras dan dedikasimu.
+    </p>
+
+    <button onclick="showMessage()">
+        Klik Ucapan 💜
+    </button>
+
+    <div id="message">
+        🌸 Selamat menjadi Sarjana, Iza! 🌸<br>
+        Semoga sukses selalu menyertaimu. 🤍✨
+    </div>
+
+</div>
+
+<script>
+
+function showMessage(){
+    document.getElementById("message").style.display="block";
+}
+
+const emojis=["🎉","🎊","🎓","💜","✨","🌸","💐"];
+
+for(let i=0;i<40;i++){
+
+    let span=document.createElement("span");
+    span.classList.add("emoji");
+
+    span.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
+
+    span.style.left=Math.random()*100+"vw";
+    span.style.animationDuration=(Math.random()*4+3)+"s";
+    span.style.fontSize=(Math.random()*20+25)+"px";
+    span.style.animationDelay=Math.random()*5+"s";
+
+    document.body.appendChild(span);
+}
+
+</script>
+
+</body>
+</html>
